@@ -21,8 +21,8 @@
 	</properties>
 
 	<scm>
-		<url>https://github.com/MathparLearningTeam/Tasks</url>
-		<developerConnection>svm:git:https://github.com/MathparLearningTeam/Tasks</developerConnection>
+		<url>https://github.com/MathParDev/TasksDev</url>
+		<developerConnection>svm:git:https://github.com/MathParDev/TasksDev</developerConnection>
 	  <tag>HEAD</tag>
   </scm>
 
@@ -186,7 +186,7 @@
 		<repository>
 			<id>github-mathpar</id>
 			<name>GitHub packages repository</name>
-			<url>https://maven.pkg.github.com/MathparLearningTeam/Tasks</url>
+			<url>https://maven.pkg.github.com/MathParDev/TasksDev</url>
 		</repository>
 	</distributionManagement>
 </project>
