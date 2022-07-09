@@ -19,7 +19,7 @@ public class AccountService {
     public boolean isTokenValid(String token){
         try {
             return Optional.ofNullable(restTemplate.getForObject(prefix + "/isTokenValid?token={token}", Boolean.class, token)).orElse(false);
-        }catch (HttpClientErrorException.Forbidden e){
+        } catch (HttpClientErrorException.Forbidden e){
             return false;
         }
     }

@@ -7,6 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.*;
 import java.util.Date;
 
+@Deprecated(forRemoval = true)
 @Data
 @NoArgsConstructor
 @Entity(name = "lectures")
