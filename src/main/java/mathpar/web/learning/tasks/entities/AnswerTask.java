@@ -9,6 +9,7 @@ import java.util.Date;
 
 import static javax.persistence.FetchType.LAZY;
 
+@Deprecated(forRemoval = true)
 @Data
 @NoArgsConstructor
 @Entity(name = "exams")

@@ -13,25 +13,25 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @Api(tags = "AnswerTask")
 public class AnswerTaskController {
-    private final AnswerTaskService answerTaskService;
-
-    public AnswerTaskController(AnswerTaskService answerTaskService) {
-        this.answerTaskService = answerTaskService;
-    }
-
-    @GetMapping("/answer-task")
-    public AnswerTask getAnswerTask(@RequestParam("id") long id){
-        return answerTaskService.getTask(id);
-    }
-
-    @PostMapping("/answer-task")
-    public AnswerTask createAnswerTask(@RequestBody CreateAnswerTaskPayload payload){
-        var accountId = SecurityUtils.getCurrentlyAuthenticatedAccountId();
-        return answerTaskService.createTaskFromTemplate(payload.getSourceId(), accountId);
-    }
-
-    @PutMapping("/answer-task/new")
-    public AnswerTask createNewAnswerTask(@RequestBody CreateNewAnswerTaskPayload payload){
-        return answerTaskService.updateTask(payload.getText(), payload.getAnswer());
-    }
+//    private final AnswerTaskService answerTaskService;
+//
+//    public AnswerTaskController(AnswerTaskService answerTaskService) {
+//        this.answerTaskService = answerTaskService;
+//    }
+//
+//    @GetMapping("/answer-task")
+//    public AnswerTask getAnswerTask(@RequestParam("id") long id){
+//        return answerTaskService.getTask(id);
+//    }
+//
+//    @PostMapping("/answer-task")
+//    public AnswerTask createAnswerTask(@RequestBody CreateAnswerTaskPayload payload){
+//        var accountId = SecurityUtils.getCurrentlyAuthenticatedAccountId();
+//        return answerTaskService.createTaskFromTemplate(payload.getSourceId(), accountId);
+//    }
+//
+//    @PutMapping("/answer-task/new")
+//    public AnswerTask createNewAnswerTask(@RequestBody CreateNewAnswerTaskPayload payload){
+//        return answerTaskService.updateTask(payload.getText(), payload.getAnswer());
+//    }
 }
