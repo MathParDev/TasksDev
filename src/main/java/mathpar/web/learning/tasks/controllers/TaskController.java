@@ -2,6 +2,8 @@ package mathpar.web.learning.tasks.controllers;
 
 import io.swagger.annotations.Api;
 import javassist.NotFoundException;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 import mathpar.web.learning.tasks.dto.TaskResponseDto;
 import mathpar.web.learning.tasks.dto.TaskSectionsResponseDto;
 import mathpar.web.learning.tasks.services.TaskService;
@@ -20,9 +22,14 @@ import static java.lang.String.format;
 @PublicApi
 @RestController
 @Api(tags = "Task")
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class TaskController {
 
     TaskService taskService;
+
+    public TaskController(TaskService taskService) {
+        this.taskService = taskService;
+    }
 
     @GetMapping("/tasks/{taskId}")
     public ResponseEntity<TaskSectionsResponseDto> getTaskWithSections(@PathVariable Long taskId) {
